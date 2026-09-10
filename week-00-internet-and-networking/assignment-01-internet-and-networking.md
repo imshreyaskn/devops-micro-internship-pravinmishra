@@ -34,7 +34,7 @@ Replace `task-1-chatgpt.png` with your actual screenshot file name.
 
 ## What I Learned (2–3 lines)
 
-Add your answer here...
+I learned that a network protocol is fundamentally an agreed-upon set of rules that enables different computing systems to communicate reliably, just like etiquette in a phone call (dialing, greeting, speaking in turns). Without standardized protocols, devices across the world wouldn't be able to establish connections or interpret transmitted data.
 
 ---
 
@@ -59,7 +59,13 @@ Write a short explanation (**100–150 words**) that includes:
 
 ## Answer
 
-Add your answer here...
+When a user anywhere in the world visits **EpicReads**, their browser initiates communication across the Internet. The website’s host is located via its unique **IP Address**, which routes the traffic to the server hosted in Finland.
+
+The communication begins when the user's browser sends an **HTTP/HTTPS** request. HTTPS ensures that all data transferred—including customer orders and login credentials—is securely encrypted.
+
+Under the hood, the **TCP/IP** protocol suite governs end-to-end connectivity: IP handles the addressing and routing across intermediary networks, while TCP provides reliable transport, guaranteeing complete and error-checked delivery.
+
+Rather than maintaining a dedicated physical circuit between Finland and the user, the communication relies on **Packet Switching**. The web assets are divided into small, manageable packets that travel independently across global routers and undersea cables along optimal paths, reassembling seamlessly at the user's browser.
 
 ---
 
@@ -102,18 +108,18 @@ Replace `task-3-diagram.png` with your actual diagram file name.
 
 ### Frontend
 
-* Add your answer here...
-* Add your answer here...
+* **HTML5 / CSS3 / JavaScript** (Core web technologies providing layout, structure, and client-side behavior)
+* **React.js** (Modern component-based library for building interactive user interfaces)
 
 ### Backend
 
-* Add your answer here...
-* Add your answer here...
+* **Node.js / Express.js** (Lightweight, asynchronous event-driven JavaScript runtime and REST API framework)
+* **Spring Boot (Java)** (Robust enterprise-grade framework for handling business logic and microservices)
 
 ### Database
 
-* Add your answer here...
-* Add your answer here...
+* **PostgreSQL** (Enterprise-level relational database for strong ACID compliance and relational data management)
+* **MySQL** (Widely used open-source relational database management system for structured data storage)
 
 ---
 
@@ -142,7 +148,9 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+1. **DNS (Domain Name System)** serves as the Internet's directory service, translating human-friendly domain names like `epicreads.com` into machine-readable IP addresses like `52.172.142.222`.
+
+2. An **A (Address) Record** should be configured to connect `epicreads.com` to `52.172.142.222` because an A record maps domain names directly to IPv4 addresses. Since DNS operates exclusively at the IP level without port mapping, port `3000` is handled at the server level using a reverse proxy (e.g., Nginx) routing port 80/443 traffic to port 3000.
 
 ---
 
@@ -237,7 +245,7 @@ Replace `YOUR-GITHUB-USERNAME` with your GitHub username — that link is your p
 Paste your LinkedIn post URL here:
 
 ```text
-Add your URL here...
+https://lnkd.in/p/ggDyeC7b
 ```
 
 ---
@@ -246,7 +254,40 @@ Add your URL here...
 
 Paste the full text of your LinkedIn post here:
 
-Add your post content here...
+```text
+What actually happens under the hood when a user accesses a web application hosted on the other side of the planet?
+
+Starting Week 00 of the DevOps Micro Internship (DMI) with Agentic AI. Before diving into cloud infrastructure and container orchestration, we spent this week deconstructing the foundational networking layers that underpin modern systems:
+
+1. Networking Protocols via First Principles
+Used targeted technical prompting to break down network protocols. The simplest mental model is a phone conversation: dialing, waiting for a connection, greeting, taking turns to speak, and terminating the call. Without an agreed-upon sequence of rules, two independent computing systems cannot establish or maintain reliable communication.
+
+2. Global Internet and Data Routing
+Analyzed how global traffic reaches an online bookstore (EpicReads) hosted in Finland:
+- IP Address: Identifies the specific host on the global network.
+- TCP/IP: Governs end-to-end transport. IP handles routing across intermediate network hops, while TCP guarantees complete, in-order packet delivery.
+- HTTP/HTTPS: Application layer protocol securing client-server data transfer through TLS encryption.
+- Packet Switching: Removes the need for dedicated physical circuits by breaking data into discrete packets routed dynamically across optimal transit paths and reassembled at the destination.
+
+3. Application Architecture: 2-Tier vs 3-Tier
+Evaluated the architectural evolution from 2-tier systems (client directly querying the database) to standard 3-tier production environments. Decoupling presentation (React / HTML / CSS) from storage (PostgreSQL / MySQL) via an application logic layer (Spring Boot / Node.js) enables connection pooling, business logic encapsulation, and independent horizontal scaling.
+
+4. DNS and Port Resolution
+A domain name serves as a human-readable pointer. An A Record maps that domain to the underlying IPv4 address. Because DNS operates strictly at the IP layer and does not handle port mapping, redirecting traffic to an internal service port (such as 3000) must be handled at the server boundary using a reverse proxy like Nginx.
+
+5. Local Environment
+Configured the local VS Code workspace and integrated terminal for the command-line workflows ahead.
+
+Fundamentals locked in. Ready for the next phase.
+
+---
+
+P.S. This post is part of the DevOps Micro Internship (DMI) with Agentic AI — Cohort 3 — by Pravin Mishra. My graded progress is public: https://dmi.pravinmishra.com/s/imshreyaskn.html · Start your DevOps journey: https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-linkedin&utm_campaign=cohort3
+
+Mentors: Pravin Mishra & Anjana Muthunayake
+
+#DMIByPravinMishra #AgenticAI #DevOps #CloudEngineering #LearningInPublic
+```
 
 ---
 
@@ -254,19 +295,19 @@ Add your post content here...
 
 ### What did you find easy?
 
-Add your answer here...
+Understanding the role of DNS in domain name resolution and setting up the local VS Code workspace and terminal environment.
 
 ---
 
 ### What was difficult?
 
-Add your answer here...
+Visualizing how packet switching dynamically balances packets across international transit networks, and understanding that DNS A records do not handle port-level routing.
 
 ---
 
 ### What will you improve next week?
 
-Add your answer here...
+Spend more time practicing hands-on terminal commands and automating documentation notes alongside practical exercises.
 
 ---
 
